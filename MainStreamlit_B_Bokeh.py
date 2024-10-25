@@ -87,7 +87,7 @@ def lakukan_prediksi(model, data):
 if pilihan == "Prediksi Kategori Properti":
     st.title("Prediksi Kategori Properti")
     
-    model_kategori = muat_model("BestModel_CLF_RF_Bokeh.pkl")
+    model_kategori = muat_model("BestModel_CLF_GBC_Bokeh.pkl")
     
     if model_kategori is None:
         st.error("Gagal memuat model prediksi kategori.")
