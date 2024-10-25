@@ -4,8 +4,6 @@ import io
 import pickle
 import os
 
-PICKLE_DIR = r"C:\Users\Administrator\Downloads\UTSpy"
-
 pilihan = st.sidebar.selectbox(
     "Pilih Jenis Prediksi",
     ("Prediksi Kategori Properti", "Prediksi Harga Properti")
@@ -66,7 +64,7 @@ def input_data_properti():
     return None
 
 def muat_model(nama_file):
-    path_file = os.path.join(PICKLE_DIR, nama_file)
+    path_file = nama_file
     try:
         with open(path_file, 'rb') as file:
             model = pickle.load(file)
